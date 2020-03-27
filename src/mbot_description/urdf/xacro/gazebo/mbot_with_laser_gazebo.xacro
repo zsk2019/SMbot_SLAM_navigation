@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<robot name="arm" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+    <xacro:include filename="$(find mbot_description)/urdf/xacro/gazebo/mbot_base_gazebo.xacro" />
+    <xacro:include filename="$(find mbot_description)/urdf/xacro/sensors/lidar_gazebo.xacro" />
+    <xacro:include filename="$(find mbot_description)/urdf/xacro/sensors/sonar_gazebo.xacro" />
+    <xacro:include filename="$(find mbot_description)/urdf/xacro/sensors/sonar_back_gazebo.xacro" />
+    <xacro:property name="lidar_offset_x" value="0.2889393398282" />
+    <xacro:property name="lidar_offset_y" value="0.00106062999896635" />
+    <xacro:property name="lidar_offset_z" value="0.272099972395418" />
+
+   <mbot_base_gazebo/>
+    <!-- lidar -->
+    <joint name="lidar_joint" type="fixed">
+        <origin xyz="${lidar_offset_x} ${lidar_offset_y} ${lidar_offset_z}" rpy="0 0 0" />
+        <parent link="base_link"/>
+        <child link="laser_link"/>
+    </joint>
+    <xacro:rplidar prefix="laser"/>
+
+
+    <joint name="front_right_sonar_joint" type="fixed">
+      <origin
+        xyz="0.328708818153878 0.122517628221106 0.0889999858636356"
+        rpy="0 0 0.261799387800854" />
+        <parent link="base_link"/>
+        <child link="front_right_sonar_link"/>
+    </joint>
+    <sonar prefix="front_right"/>
+
+
+    <joint name="front_left_sonar_joint" type="fixed">
+      <origin
+        xyz="0.328708818153878 -0.122517647959302 0.0889999586919727"
+        rpy="0 0 -0.261799387800851" />
+        <parent link="base_link"/>
+        <child link="front_left_sonar_link"/>
+    </joint>
+    <sonar prefix="front_left"/>
+
+    <joint name="front_above_sonar_joint" type="fixed">
+      <origin
+        xyz="0.366 0 0.440999972277802"
+        rpy="-2.50606677340551E-05 0.00452486120856033 0" />
+        <parent link="base_link"/>
+        <child link="front_above_sonar_link"/>
+    </joint>
+    <sonar prefix="front_above"/>
+
+
+    <joint name="back_left_sonar_joint" type="fixed">
+      <origin
+        xyz="-0.208982437885773 0.127293786247109 0.135999986393258"
+        rpy="0 0 2.70526034059121" />
+        <parent link="base_link"/>
+        <child link="sonar_back_left_link"/>
+    </joint>
+   <sonar_back  prefix="left"/>
+
+
+   <joint name="back_right_sonar_joint" type="fixed">
+     <origin
+       xyz="-0.208982437885773 -0.127293816408852 0.13599995816235"
+       rpy="0 0 -2.70526034059121" />
+       <parent link="base_link"/>
+       <child link="sonar_back_right_link"/>
+   </joint>
+  <sonar_back  prefix="right"/>
+
+</robot>

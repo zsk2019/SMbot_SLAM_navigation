@@ -1,0 +1,525 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com)
+     Commit Version: 1.5.1-0-g916b5db  Build Version: 1.5.7152.31018
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="smbot_description4">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.106492268724378 -0.00148694701933302 0.536234808142642"
+        rpy="0 0 0" />
+      <mass
+        value="39.5096930242325" />
+      <inertia
+        ixx="1.71763556317548"
+        ixy="-0.00235586142796498"
+        ixz="-0.0429816081105493"
+        iyy="1.9502752913027"
+        iyz="0.00118612967789479"
+        izz="0.604098704612138" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://smbot_description4/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0.749019607843137 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://smbot_description4/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="link_wheel_left">
+    <inertial>
+      <origin
+        xyz="-9.71445146547012E-17 -0.000500000000824147 7.43211320310654E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.478515278465427" />
+      <inertia
+        ixx="0.000919887702981847"
+        ixy="-5.15060626523394E-19"
+        ixz="-3.03037340643839E-20"
+        iyy="0.00172218757582685"
+        iyz="8.89627671521577E-11"
+        izz="0.000919917345428581" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://smbot_description4/meshes/link_wheel_left.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://smbot_description4/meshes/link_wheel_left.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_wheel_left"
+    type="fixed">
+    <origin
+      xyz="0 0.228000000000002 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="link_wheel_left" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="link_wheel_right">
+    <inertial>
+      <origin
+        xyz="-4.16333634234434E-17 -8.24229573481716E-13 7.4321686470754E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.478515278465427" />
+      <inertia
+        ixx="0.000919887702981847"
+        ixy="-5.24986800594953E-19"
+        ixz="3.03058503779904E-20"
+        iyy="0.00172218757582685"
+        iyz="8.89627670245906E-11"
+        izz="0.000919917345428581" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://smbot_description4/meshes/link_wheel_right.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://smbot_description4/meshes/link_wheel_right.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_wheel_right"
+    type="fixed">
+    <origin
+      xyz="0 -0.227500000000002 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="link_wheel_right" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="link_caster">
+    <inertial>
+      <origin
+        xyz="2.77555756156289E-17 -0.000431886286135946 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.205283816888508" />
+      <inertia
+        ixx="0.000153304057154647"
+        ixy="1.673524820576E-20"
+        ixz="0"
+        iyy="0.000280614230922824"
+        iyz="-6.76855511542751E-31"
+        izz="0.000153304057154647" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://smbot_description4/meshes/link_caster.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://smbot_description4/meshes/link_caster.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_caster"
+    type="continuous">
+    <origin
+      xyz="0.205419999998498 0 -0.0256900277222159"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="link_caster" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="link_sonar_front_right">
+    <inertial>
+      <origin
+        xyz="-0.0111532555797955 1.93178806284777E-14 1.38777878078145E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.0124805004151605" />
+      <inertia
+        ixx="5.35082972263177E-07"
+        ixy="7.00734475395722E-19"
+        ixz="-1.45381871674759E-21"
+        iyy="9.39414302038018E-07"
+        iyz="-3.35595255288334E-23"
+        izz="9.39414302038017E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://smbot_description4/meshes/link_sonar_front_right.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://smbot_description4/meshes/link_sonar_front_right.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_sonar_front_right"
+    type="fixed">
+    <origin
+      xyz="0.328708818153878 0.122517628221106 0.0889999858636356"
+      rpy="0 0 0.261799387800854" />
+    <parent
+      link="base_link" />
+    <child
+      link="link_sonar_front_right" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  
+  <link
+    name="link_sonar_front_left">
+    <inertial>
+      <origin
+        xyz="-0.0111532555797956 -1.93317584162855E-14 -1.38777878078145E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.0124805004151605" />
+      <inertia
+        ixx="5.35082972263177E-07"
+        ixy="-7.00787414954925E-19"
+        ixz="1.15838331906944E-21"
+        iyy="9.39414302038018E-07"
+        iyz="2.02452184610624E-23"
+        izz="9.39414302038017E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://smbot_description4/meshes/link_sonar_front_left.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://smbot_description4/meshes/link_sonar_front_left.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_sonar_front_left"
+    type="fixed">
+    <origin
+      xyz="0.328708818153878 -0.122517647959302 0.0889999586919727"
+      rpy="0 0 -0.261799387800851" />
+    <parent
+      link="base_link" />
+    <child
+      link="link_sonar_front_left" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="link_sonar_front_above">
+    <inertial>
+      <origin
+        xyz="-0.0111531414020555 1.27032698935865E-09 -5.04667612932219E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.0124805004151605" />
+      <inertia
+        ixx="5.350912506355E-07"
+        ixy="4.60518223388122E-14"
+        ixz="-1.82951817653214E-09"
+        iyy="9.39414302038011E-07"
+        iyz="2.08379526567182E-16"
+        izz="9.39406023665693E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://smbot_description4/meshes/link_sonar_front_above.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://smbot_description4/meshes/link_sonar_front_above.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_sonar_front_above"
+    type="fixed">
+    <origin
+      xyz="0.366 0 0.440999972277802"
+      rpy="-2.50606677340551E-05 0.00452486120856033 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="link_sonar_front_above" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="link_sonar_back_left">
+    <inertial>
+      <origin
+        xyz="-0.0111532555797956 1.38777878078145E-17 2.77555756156289E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.00624025020758028" />
+      <inertia
+        ixx="2.6754148613159E-07"
+        ixy="-2.18375681713999E-22"
+        ixz="-4.71424732590244E-22"
+        iyy="4.6970715101901E-07"
+        iyz="1.15932968273306E-23"
+        izz="4.6970715101901E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://smbot_description4/meshes/link_sonar_back_left.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://smbot_description4/meshes/link_sonar_back_left.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_sonar_back_left"
+    type="fixed">
+    <origin
+      xyz="-0.208982437885773 0.127293786247109 0.135999986393258"
+      rpy="0 0 2.70526034059121" />
+    <parent
+      link="base_link" />
+    <child
+      link="link_sonar_back_left" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="link_lidar">
+    <inertial>
+      <origin
+        xyz="2.77555756156289E-17 -2.60208521396521E-17 -0.0296272769990145"
+        rpy="0 0 0" />
+      <mass
+        value="0.398155541808567" />
+      <inertia
+        ixx="0.000367671937320448"
+        ixy="-4.81160622564439E-19"
+        ixz="1.31139074784662E-19"
+        iyy="0.000367671937320448"
+        iyz="-1.26099177680066E-19"
+        izz="0.00031914344200442" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://smbot_description4/meshes/link_lidar.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://smbot_description4/meshes/link_lidar.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_lidar"
+    type="fixed">
+    <origin
+      xyz="0.2889393398282 0.00106062999896635 0.272099972395418"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="link_lidar" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="link_sonar_back_right">
+    <inertial>
+      <origin
+        xyz="-0.0111532555797956 2.77555756156289E-17 2.77555756156289E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.00624025020758029" />
+      <inertia
+        ixx="2.6754148613159E-07"
+        ixy="2.05140791913151E-22"
+        ixz="-1.24643212585072E-21"
+        iyy="4.6970715101901E-07"
+        iyz="-2.39466548426701E-23"
+        izz="4.6970715101901E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://smbot_description4/meshes/link_sonar_back_right.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://smbot_description4/meshes/link_sonar_back_right.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_sonar_back_right"
+    type="fixed">
+    <origin
+      xyz="-0.208982437885773 -0.127293816408852 0.13599995816235"
+      rpy="0 0 -2.70526034059121" />
+    <parent
+      link="base_link" />
+    <child
+      link="link_sonar_back_right" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>
