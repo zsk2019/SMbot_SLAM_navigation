@@ -41,9 +41,8 @@
     <gazebo reference="sonar_back_${prefix}_link">
         <material>Gazebo/black</material>
     </gazebo>
-
     <gazebo reference="sonar_back_${prefix}_link">
-      <sensor type="ray" name="$back_{prefix}_sonar">
+      <sensor type="ray" name="$back_${prefix}_sonar">
         <pose>0 0 0 0 0 0</pose>
         <visualize>false</visualize>
         <update_rate>5</update_rate>
