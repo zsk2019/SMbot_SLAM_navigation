@@ -9,3 +9,10 @@ local_costmap:
    height: 6.0
    resolution: 0.01
    transform_tolerance: 1.0
+plugins:
+   #- {name: obstacle_layer, type: "costmap_2d::VoxelLayer"}
+     - {name: sonar,   type: "range_sensor_layer::RangeSensorLayer"}
+
+   sonar:
+     topics: ["/front_above_sonar_scan"]#注意替换成自己的topic名字
+     no_readings_timeout: 0.0
