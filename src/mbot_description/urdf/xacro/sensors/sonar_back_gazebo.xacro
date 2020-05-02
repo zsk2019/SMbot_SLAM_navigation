@@ -72,7 +72,7 @@
           <alwaysOn>true</alwaysOn>
           <updateRate>50</updateRate>
           <topicName>/${prefix}_sonar_scan</topicName>
-          <frameName>${prefix}_sonar_link</frameName>
+          <frameName>sonar_back_${prefix}_link</frameName>
           <radiation>ultrasound</radiation>
           <fov>0.5</fov>
         </plugin>
